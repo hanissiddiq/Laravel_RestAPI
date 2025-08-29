@@ -39,8 +39,9 @@ class PostController extends Controller
         }
 
         // return $data;
+        return new PostResource($data);
 
-        return response()->json(new PostResource($data), 200);
+        // return response()->json(new PostResource($data), 200);
     }
 
     public function store(Request $request)

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $guarded = [];
-    protected $hidden = ['created_at', 'updated_at'];
-    protected $appends = ['stored_at'];
+    // protected $hidden = ['created_at', 'updated_at'];
+    // protected $appends = ['stored_at'];
 
     public function getStoredAtAttribute()
     {

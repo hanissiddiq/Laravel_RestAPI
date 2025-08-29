@@ -1,3 +1,64 @@
+# 🚀 Laravel REST API Setup & Testing Guide
+
+## 📌 Requirements
+- PHP v7.2.5
+- Composer
+- MySQL / MariaDB
+- phpMyAdmin (optional)
+- Postman (for API testing)
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone project & masuk folder
+```cd Laravel_RestAPI```
+### 2. Install dependency dengan Composer
+```composer install```
+### 3. Jalankan server Laravel
+```php artisan serve```
+
+
+## 🗄️ Database Setup
+
+### 1. Buat database baru di MySQL
+Masuk ke phpMyAdmin lalu buat database dengan nama: ```laravel_restapi```
+### 2. Import file SQL (opsional)
+Jika ada file ```laravel_restapi.sql```, import ke phpMyAdmin atau bisa juga ```php artisan db:seed``` untuk mengisi database secara random berdasarkan seeder yang sudah dibuat.
+### 3. Jalankan migrasi
+```php artisan migrate```
+
+
+## 🧪 API Testing with Postman
+
+### 1. Buka Postman
+Masuk ke phpMyAdmin lalu buat database dengan nama: ```laravel_restapi```
+### 2. Import collection
+cari file ```Laravel_RestAPI.postman_collection.json``` import ke postman. baca dokumentasi nya.
+
+### 3. Testing API
+Gunakan request yang sudah tersedia di collection untuk mencoba:
+- Login
+- CRUD Post (GET, POST, PUT, DELETE)
+- Logout
+- satu contoh endpoint methode ```POST``` ```laravel_restapi.test/api/post``` untuk Create postingan dengan format JSON ```{'title':'Judul Postingan','body':'Isi Postingan'}```
+- salah satu contoh endpoint methode ```GET``` ```laravel_restapi.test/api/post``` untuk mendapatkan semua data postingan
+- endpoint method ```GET``` ```laravel_restapi.test/api/post/1``` untuk mendapatkan postingan berdasarkan id_post
+- endpoint method ```PUT``` ```laravel_restapi.test/api/post/1``` untuk mengedit postingan berdasarkan id_post
+- endpoint method ```DELETE``` ```laravel_restapi.test/api/post/1``` untuk menghapus postingan berdasarkan id_post
+
+using ```php v7.2.5```
+
+for running ```php artisan serve```
+make a database with name ```laravel_restapi```
+import laravel_restapi to phpmyadmin
+php artisan migrate
+php artisan db:seed
+
+untuk testing dengan Post-man API
+buka post-man import collection yang ada pada root project 
+berikut file nya ```Laravel_RestAPI.postman_collection.json```
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
