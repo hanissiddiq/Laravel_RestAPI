@@ -19,6 +19,7 @@ class PostController extends Controller
 
     public function index()
     {
+        // return request()->user();
         // DB::listen(function ($query) {
         //     var_dump($query->sql);
         // });
@@ -59,6 +60,7 @@ class PostController extends Controller
         }
 
         // $response = Post::create($data);
+        // mendapatkan post berdasarkan user yang sedang login
         $response = request()->user()->posts()->create($data);
 
         return response()->json($response, 201);

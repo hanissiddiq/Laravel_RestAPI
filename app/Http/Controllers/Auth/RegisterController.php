@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -69,5 +71,18 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'api_token' => Str::random(80),
         ]);
+    }
+
+    /**
+     * Override response setelah register sukses
+     */
+    protected function registered(Request $request, $user)
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'Register berhasil',
+            'user' => $user,
+            'token' => $user->api_token,
+        ],201);
     }
 }

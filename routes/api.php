@@ -1,5 +1,9 @@
 <?php
-
+// namespace  App\Http\Controllers\Auth;
+// use App\Http\Controllers\Auth\Route;
+// use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Http\Request;
 
 /*
@@ -16,6 +20,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Register User
+Route::post('/register', [RegisterController::class, 'register']);
+//Login User
+Route::post('/login', [LoginController::class, 'login']);
+//Logout User
+// Route::middleware('auth:api')->post('/logout', [LoginController::class, 'logout']);
+// Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/post', 'PostController@index');
 Route::get('/post/{id}', 'PostController@show');

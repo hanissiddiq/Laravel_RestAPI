@@ -38,7 +38,15 @@ cari file ```Laravel_RestAPI.postman_collection.json``` import ke postman. baca 
 
 ### 3. Testing API
 Gunakan request yang sudah tersedia di collection untuk mencoba:
-- Login
+- Login (```laravel_restapi.test/api/post```) endpoint tersebut baru bisa diakses ketika sudah login tambahkan Bearer Token pada postman diambil dari database Table ```users```, column ```api_token```
+- Register (```laravel_restapi.test/api/register```) endpoint tersebut Create user dengan format JSON ```{
+  "name": "Afra",
+  "email": "Afra@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}``` 
+jika muncul status 201 maka muncul response 
+```Register Berhasil```
 - CRUD Post (GET, POST, PUT, DELETE)
 - Logout
 - satu contoh endpoint methode ```POST``` ```laravel_restapi.test/api/post``` untuk Create postingan dengan format JSON ```{'title':'Judul Postingan','body':'Isi Postingan'}```

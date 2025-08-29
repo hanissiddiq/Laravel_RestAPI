@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "0788b884-c38f-4ee0-95ff-196b50146cb4",
+		"name": "Laravel_RestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3331622"
+	},
+	"item": [
+		{
+			"name": "Get Data Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/api/post/1"
+			},
+			"response": []
+		},
+		{
+			"name": "All Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "bXvijbedWSgIe7LR7ICP1ju0PRy0Yg6SB8UPNnhgzPowhEnQnZGegsi8aNIOudMv14hRXREWFqxlSv3S"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"mreilly@example.org\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "bXvijbedWSgIe7LR7ICP1ju0PRy0Yg6SB8UPNnhgzPowhEnQnZGegsi8aNIOudMv14hRXREWFqxlSv3S"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"mreilly@example.org\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/post/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "bXvijbedWSgIe7LR7ICP1ju0PRy0Yg6SB8UPNnhgzPowhEnQnZGegsi8aNIOudMv14hRXREWFqxlSv3S"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Berita Tentang Aceh\",\r\n  \"body\": \"Aceh adalah sebuah provinsi yang sangat istimewa dari seluruh provinsi yang ada di Indonesia dengan segala kekayaan alam yang dimiliki, namun sayangnya aceh tidak mendapatkan hasil dari pengelolaan kekayaan alam tersebut dari pemerintah\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/post/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "bXvijbedWSgIe7LR7ICP1ju0PRy0Yg6SB8UPNnhgzPowhEnQnZGegsi8aNIOudMv14hRXREWFqxlSv3S"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Medan dengan julukan Gotham-City\",\r\n  \"body\": \"Medan mendapatkan julukan Gotham City dari media dan warganet karena tingkat kriminalitas yang tinggi dan kejadian-kejadian tidak wajar, seperti pencurian fasilitas publik, begal, dan geng motor, yang mengingatkan pada kota fiksi Gotham City yang digambarkan gelap dan penuh kejahatan dalam serial Batman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "bXvijbedWSgIe7LR7ICP1ju0PRy0Yg6SB8UPNnhgzPowhEnQnZGegsi8aNIOudMv14hRXREWFqxlSv3S"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Medan dengan julukan Gotham-City\",\r\n  \"body\": \"Medan mendapatkan julukan Gotham City dari media dan warganet karena tingkat kriminalitas yang tinggi dan kejadian-kejadian tidak wajar, seperti pencurian fasilitas publik, begal, dan geng motor, yang mengingatkan pada kota fiksi Gotham City yang digambarkan gelap dan penuh kejahatan dalam serial Batman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/post/20"
+			},
+			"response": []
+		},
+		{
+			"name": "Login with API Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "jBRmIERMhscjQ1SnWjrPjxCPtZ3pUQ7qSr1DQ5Yl1TRxJ55TdI4DuHXTMEHp9Q3lKytWwucfrdbY1Jne"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Berita Tentang Aceh\",\r\n    \"body\":\"Aceh adalah sebuah provinsi yang sangat istimewa dari seluruh provinsi yang ada di Indonesia dengan segala kekayaan alam yang dimiliki, namun sayangnya aceh tidak mendapatkan hasil dari pengelolaan kekayaan alam tersebut dari pemerintah\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/api/post/"
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Afra\",\r\n  \"email\": \"Afra@gmail.com\",\r\n  \"password\": \"password\",\r\n  \"password_confirmation\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "3QeCdRVwQMKihDmQtfqJ7Wd1tU72mn80yl1GdbFSReZac6mADGTdE32rAW6dMHr84k0FQHyNhrhXnUl5"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3QeCdRVwQMKihDmQtfqJ7Wd1tU72mn80yl1GdbFSReZac6mADGTdE32rAW6dMHr84k0FQHyNhrhXnUl5",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"Afra@gmail.com\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "laravel_restapi.test/api/login"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
